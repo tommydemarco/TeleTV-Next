@@ -2,7 +2,7 @@ import Link from 'next/link'
 //========> CSS
 import styles from './ShowThumbnail.module.scss'
 
-const ShowThumbnail = ({show}) => {
+const ShowThumbnail = ({show, href, as}) => {
     const { name, image, id, type} = show
     console.log(name, image, id, type)
     return (
@@ -18,7 +18,7 @@ const ShowThumbnail = ({show}) => {
                 <h3 className={styles.thumbnail__name}>{name}</h3>
                 <h4 className={styles.thumbnail_type}>{type}</h4>
             </div>
-            <Link href={`/show/${id}`} className={styles.thumbnail__link}>
+            <Link href={href} as={as} className={styles.thumbnail__link}>
                 <a className={styles.thumbnail__button}>View show details</a>
             </Link>          
         </article>

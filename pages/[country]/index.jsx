@@ -28,10 +28,10 @@ export async function getServerSideProps(context) {
         console.log(err)
         data = null
     }
-    return { props: {shows} }
+    return { props: {shows, country} }
 }
 
-export default function ShowsPage({ shows }) {
+export default function ShowsPage({ shows, country }) {
     if(!shows) {
         return <Error statusCode={503}></Error>
     }
@@ -40,9 +40,15 @@ export default function ShowsPage({ shows }) {
         <Layout title="Shows">
             <div className="shows-container">
                 {showList.map(show => {
-                    return <ShowThumbnail id={show.id} show={show} />
+                    return <ShowThumbnail 
+                                id={show.id} 
+                                show={show} 
+                                href={`/[country]/[showId]`}
+                                as={`/${country}/${show.id}`}
+                            />
                 })}
             </div>
+
             <style jsx>
                 {`
                 .shows-container {
@@ -53,6 +59,7 @@ export default function ShowsPage({ shows }) {
                 }
                 `}
             </style>
+            
         </Layout>
     )
 }
