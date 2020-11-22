@@ -19,11 +19,14 @@ export async function getServerSideProps(context) {
         //sorry about the syntax but I've been getting 500s for 20 minutes straight,
         //just need to make sure it works 
         shows = shows.filter(show => {
-            if (show.image.medium) {
+            if (show.image) {
                 return true
             } else {
                 return false
             }})
+            //gettin only the shows that have a title length that 
+            //will not break my UI
+            .filter(show => show.name.length < 20)
     } catch(err) {
         console.log(err)
         data = null
@@ -59,7 +62,7 @@ export default function ShowsPage({ shows, country }) {
                 }
                 `}
             </style>
-            
+
         </Layout>
     )
 }

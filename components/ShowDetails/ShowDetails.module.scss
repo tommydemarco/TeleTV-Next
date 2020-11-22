@@ -1,0 +1,26 @@
+.show {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    &__img_container {
+        max-height: 50rem;
+        flex: 0 0 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3px;
+        overflow: hidden;
+        background: rgb(27, 156, 252);
+        background: linear-gradient(90deg, rgba(27, 156, 252, 1) 9%, rgba(5, 196, 107, 1) 100%);
+    }
+    &__img {
+        width: 100%;
+    }
+    &__content {
+        flex: 1;
+        margin-left: 4rem;
+        display: flex;
+        flex-direction: column;
+        margin-top: 3rem;
+    }
+}

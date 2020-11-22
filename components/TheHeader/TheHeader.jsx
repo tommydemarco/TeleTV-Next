@@ -1,8 +1,31 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 //=========> CSS
 import styles from './TheHeader.module.scss'
 
+const countries = [
+    {name: 'Select Country', code: ''},
+    {name: 'United States', code: 'us'},
+    {name: 'Great Britain', code: 'gb'},
+    {name: 'Germany', code: 'de'}
+]
+
 export default function TheHeader() {
+
+    const router = useRouter() 
+
+    const selectedCoutry = router.query.country || ''
+
+    const renderCoutryOptions = () => {
+        return countries.map(country => {
+            return <option value={country.code}>{country.name}</option>
+        })
+    }
+
+    const goToCountryShows = (e) => {
+        router.push('/[country]', `/${e.target.value}`)
+    }
+
     return (
         <div className={styles.topbar}>
             <div className={styles.topbar__container}>
@@ -10,7 +33,9 @@ export default function TheHeader() {
                     <span className={styles.topbar__logo}>TeleTV</span>
                 </Link>
                 <form>
-                    <input type="text" />
+                   <select defaultValue={selectedCoutry} onChange={(e) => goToCountryShows(e)}>
+                        {renderCoutryOptions()}
+                   </select>
                 </form>
                 <ul className={styles.topbar__list}>
                     <li className={styles.topbar__item}>

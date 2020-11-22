@@ -36,11 +36,8 @@ const showId = ({ show }) => {
 
             <style jsx>
                 {`
-                .shows-container {
+                .show-container {
                     margin-top:5rem;
-                    display:flex;
-                    flex-wrap:wrap;
-                    justify-content:space-between;
                 }
                 `}
             </style>
