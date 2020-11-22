@@ -1,11 +1,16 @@
+import Link from 'next/link'
 //=========> COMPONENTS 
 import Layout from '../components/Layout/Layout'
-  
-export default function HomePage() {
+
+const HomePage = () => {
     return (
         <Layout title="Home">
-            <h1>Home page</h1>
+            <h1>This is the home page</h1>
+            <Link href="/us">
+                <a>Go to the USA shows</a>
+            </Link>
         </Layout>
     )
 }
 
+export default HomePage
