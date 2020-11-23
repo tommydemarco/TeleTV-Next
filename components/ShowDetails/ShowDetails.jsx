@@ -60,7 +60,7 @@ const ShowDetails = ({ show }) => {
                 display:flex;
                 flex-wrap:wrap;
                 justify-content:flex-start;
-            }  
+            }
             `}
         </style>
 

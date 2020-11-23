@@ -1,13 +1,14 @@
 import axios from 'axios'
 import Error from 'next/error'
+import { useRouter } from 'next/router'
 //=========> COMPONENTS 
 import Layout from '../../components/Layout/Layout'
 import ShowThumbnail from '../../components/ShowThumbnail/ShowThumbnail'
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
 
-    const { query } = context 
-    const country = query.country
+    const { params } = context 
+    const country = params.country
     
     let data;
     let shows;
@@ -34,22 +35,38 @@ export async function getServerSideProps(context) {
     return { props: {shows, country} }
 }
 
-export default function ShowsPage({ shows, country }) {
-    if(!shows) {
-        return <Error statusCode={503}></Error>
+//GET STATIC PROPS FOR INFINITE PATHS OPTIONS
+export const getStaticPaths = () => {
+    return {
+        paths: [],
+        fallback: true
     }
-    const showList = shows.slice(0, 6)
+}
+
+export default function ShowsPage(props) {
+
+    const router = useRouter()
+ 
+    const renderList = () => {
+        return props.shows.slice(0, 6).map(show => (
+            <ShowThumbnail 
+                id={show.id} 
+                show={show} 
+                href={`/[country]/[showId]`}
+                as={`/${props.country}/${show.id}`}
+            />
+        ))
+    }
+
     return (
         <Layout title="Shows">
             <div className="shows-container">
-                {showList.map(show => {
-                    return <ShowThumbnail 
-                                id={show.id} 
-                                show={show} 
-                                href={`/[country]/[showId]`}
-                                as={`/${country}/${show.id}`}
-                            />
-                })}
+                {
+                    !router.isFallback ?
+                    renderList()
+                    : <p> Loading content...</p>
+                }
+                
             </div>
 
             <style jsx>

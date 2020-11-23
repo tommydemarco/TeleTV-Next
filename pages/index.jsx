@@ -1,22 +1,41 @@
 import Link from 'next/link'
 //=========> COMPONENTS 
 import Layout from '../components/Layout/Layout'
+import HomeFeature from '../components/HomeFeature/HomeFeature'
 
-export const getServerSideProps = () => {
-    console.log(process.browser)
+const features = [
+    {id: 1, name: "Fast", icon: ""},
+    {id: 1, name: "Reliable", icon: ""},
+    {id: 2, name: "Connected", icon: ""}
+]
 
-    return { props: { test: 'test' }}
+export const getStaticProps = async () => {
+
+    const response = features
+
+    console.log(response)
+
+    return {
+        revalidate: 1000,
+        props: {
+            features: response
+        }
+    }
 }
 
-const HomePage = () => {
+
+const HomePage = ({ features }) => {
+
+    const renderFeatures = () => {
+        return features.map(feature => {
+            return <HomeFeature key={feature.id} feature={feature} />
+        })
+    }
 
     return (
         <Layout title="Home">
             <h1>This is the home page</h1>
-            <Link href="/us">
-                <a>Go to the USA shows</a>
-            </Link>
-            <h1>{process.browser}</h1>
+            {renderFeatures()}
         </Layout>
     )
 }
