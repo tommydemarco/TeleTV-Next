@@ -1,6 +1,5 @@
-import Link from 'next/link'
+import Head from 'next/head'
 //=========> COMPONENTS 
-import Layout from '../components/Layout/Layout'
 import HomeFeature from '../components/HomeFeature/HomeFeature'
 
 const features = [
@@ -34,15 +33,17 @@ const HomePage = ({ features }) => {
 
     return (
         <>
-        <Layout title="Home">
-            <div className="home-container">
-                <h1 className="home-container__title">Welcome to TeleTV</h1>
-                <span>Your ultimate guide for TV shows</span>
-                <div className="features-container">
-                    {renderFeatures()}
-                </div>
+        <Head>
+            <title>Tele TV - Home</title>
+        </Head>
+
+        <div className="home-container">
+            <h1 className="home-container__title">Welcome to TeleTV</h1>
+            <span>Your ultimate guide for TV shows</span>
+            <div className="features-container">
+                {renderFeatures()}
             </div>
-        </Layout>
+        </div>
 
         <style jsx>
             {`

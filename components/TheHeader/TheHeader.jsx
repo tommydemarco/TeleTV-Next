@@ -30,7 +30,7 @@ export default function TheHeader() {
         <div className={styles.topbar}>
             <div className={styles.topbar__container}>
                 <Link href="/">
-                    <span className={styles.topbar__logo}>TeleTV</span>
+                    <span className={styles.topbar__logo}>Next.js TeleTV</span>
                 </Link>
                 <form className={styles.topbar__form}>
                    <select 

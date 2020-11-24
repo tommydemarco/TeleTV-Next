@@ -1,8 +1,7 @@
 import axios from 'axios'
-import Error from 'next/error'
 import { useRouter } from 'next/router'
+import Head from 'next/head'
 //=========> COMPONENTS 
-import Layout from '../../components/Layout/Layout'
 import ShowThumbnail from '../../components/ShowThumbnail/ShowThumbnail'
 
 export async function getStaticProps(context) {
@@ -59,7 +58,12 @@ export default function ShowsPage(props) {
     }
 
     return (
-        <Layout title="Shows">
+            <>
+            <Head>
+                <title>TeleTV - Shows</title>
+            </Head>
+
+
             <div className="shows-container">
             <h1 className="shows-container__title">Available shows</h1>
                 <span>Select the one you like the most</span>
@@ -95,7 +99,7 @@ export default function ShowsPage(props) {
                 `}
             </style>
 
-        </Layout>
+        </>
     )
 }
 

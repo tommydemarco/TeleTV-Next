@@ -1,8 +1,7 @@
 import axios from 'axios'
-import Error from 'next/error'
 import CustomError from '../_error'
+import Head from 'next/head'
 //=======> COMPONENTS 
-import Layout from '../../components/Layout/Layout'
 import ShowDetails from '../../components/ShowDetails/ShowDetails'
 
 export const getServerSideProps = async (context) => {
@@ -31,7 +30,10 @@ const showId = ({ show, statusCode }) => {
     }
 
     return (
-        <Layout>
+        <>
+            <Head>
+                <title>TeleTV -  {show.name}</title>
+            </Head>
             <div className="show-container">
                 <ShowDetails show={show} />
             </div>
@@ -44,7 +46,7 @@ const showId = ({ show, statusCode }) => {
                 `}
             </style>
 
-        </Layout>
+        </>
     )
 }
 
