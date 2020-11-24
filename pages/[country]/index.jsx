@@ -61,17 +61,32 @@ export default function ShowsPage(props) {
     return (
         <Layout title="Shows">
             <div className="shows-container">
-                {
-                    !router.isFallback ?
-                    renderList()
-                    : <p> Loading content...</p>
-                }
-                
+            <h1 className="shows-container__title">Available shows</h1>
+                <span>Select the one you like the most</span>
+                <div className="shows-display">
+                    {
+                        !router.isFallback ?
+                        renderList()
+                        : <p> Loading content...</p>
+                    }
+                    
+                </div>
             </div>
 
             <style jsx>
                 {`
                 .shows-container {
+                    margin-top:5rem;
+                    display:flex;
+                    flex-direction: column;
+                    text-align:center;
+                    flex-wrap:wrap;
+                    justify-content:space-between;
+                }
+                .shows-container__title {
+                        margin: 0 0 .5rem 0;
+                }
+                .shows-display {
                     margin-top:5rem;
                     display:flex;
                     flex-wrap:wrap;

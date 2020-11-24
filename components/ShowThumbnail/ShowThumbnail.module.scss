@@ -12,12 +12,13 @@
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        max-height: 300px;
+        max-height: 35rem;
     }
     &__img {
         flex-shrink: 0;
         min-width: 100%;
         min-height: 100%;
+        opacity: 0.9;
     }
     &__content {
         padding: 2rem;
@@ -48,5 +49,17 @@
         &:hover {
             transform: scale(1.1)
         }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .thumbnail {
+        flex: 0 1 47%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .thumbnail {
+        flex: 0 1 100%;
     }
 }

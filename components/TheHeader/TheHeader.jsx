@@ -32,8 +32,12 @@ export default function TheHeader() {
                 <Link href="/">
                     <span className={styles.topbar__logo}>TeleTV</span>
                 </Link>
-                <form>
-                   <select defaultValue={selectedCoutry} onChange={(e) => goToCountryShows(e)}>
+                <form className={styles.topbar__form}>
+                   <select 
+                    defaultValue={selectedCoutry} 
+                    onChange={(e) => goToCountryShows(e)}
+                    className={styles.topbar__select}
+                    >
                         {renderCoutryOptions()}
                    </select>
                 </form>

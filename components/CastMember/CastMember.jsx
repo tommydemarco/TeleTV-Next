@@ -12,7 +12,10 @@ const CastMember = ({ castMember }) => {
                     src={castMember.image.medium}
                 />
             </div>
-            <h5>{castMember.name}</h5>
+            <div className={styles.actor__content}>
+                <h5 className={styles.actor__name}>{castMember.name}</h5>
+            </div>
+            
         </div>
     )
 }

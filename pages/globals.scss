@@ -24,24 +24,16 @@ a {
 
 //FOOTER 
 .footer {
-    margin-top: 10rem;
-    padding: 7rem 0;
+    margin-top: 4rem;
+    padding: 2rem 0 4rem 0;
     background: rgb(27, 156, 252);
     background: linear-gradient(90deg, rgba(27, 156, 252, 1) 9%, rgba(5, 196, 107, 1) 100%);
     color: white;
     display: flex;
     justify-content: center;
     position: relative;
-    &__image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4rem;
-        background-image: url('//localhost:3000/assets/img/footer-shape.png');
-        background-size: cover;
-    }
     &__container {
+        width: 90%;
         max-width: 120rem;
     }
     &__main {
@@ -80,7 +72,6 @@ a {
     &__list {
         list-style: none;
     }
-    &__listitem {}
     &__social-link {
         color: white;
         display: inline-block;
@@ -96,7 +87,7 @@ a {
         }
         &:hover {
             background-color: white;
-            color: blue;
+            color: rgb(27, 156, 252);
             transform: scale(1.2);
         }
     }
@@ -116,7 +107,7 @@ a {
     }
 }
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 786px) {
     .footer {
         &__main {
             justify-content: flex-start;

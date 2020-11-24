@@ -80,4 +80,4 @@ export default function TheFooter() {
         </footer>
         </>
     )
-}<i className="fa fa-chevron-right"></i>
+}

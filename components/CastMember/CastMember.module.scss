@@ -1,4 +1,25 @@
 .actor {
     flex: 0 1 18%;
     margin-right: 1%;
+    padding: 2.2px;
+    background: rgb(27, 156, 252);
+    background: linear-gradient(90deg, rgba(27, 156, 252, 1) 9%, rgba(5, 196, 107, 1) 100%);
+    margin-bottom: 4rem;
+    &__img_container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__img {
+        display: block;
+        opacity: 0.9;
+    }
+    &__content {
+        background-color: #ecf0f1;
+        padding: 2rem;
+    }
+    &__name {
+        margin: 0;
+    }
 }

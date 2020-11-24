@@ -20,7 +20,7 @@ export default function Layout({ children, title }) {
             <style jsx>
                 {`
                 .content-container {
-                    width:80%;
+                    width:90%;
                     max-width: 120rem;
                     margin: 0 auto;
                 }

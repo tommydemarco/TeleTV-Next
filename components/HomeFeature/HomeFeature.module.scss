@@ -1,0 +1,29 @@
+.feature {
+    flex: 1 1;
+    padding: 3px;
+    background: rgb(27, 156, 252);
+    background: linear-gradient(90deg, rgba(27, 156, 252, 1) 9%, rgba(5, 196, 107, 1) 100%);
+    padding: 2.2px;
+    margin-bottom: 4rem;
+    &__container {
+        background-color: #ecf0f1;
+        padding: 2rem;
+        padding-top: 3rem;
+        & i {
+            font-size: 5rem;
+            color: rgb(27, 156, 252);
+        }
+    }
+    &__icon {
+        font-size: 4rem;
+    }
+    &__title {
+        font-size: 2.5rem
+    }
+    &__description {
+        font-size: 1.6rem;
+    }
+    &:not(:last-child) {
+        margin-right: 2rem;
+    }
+}

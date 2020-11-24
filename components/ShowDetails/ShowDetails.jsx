@@ -21,11 +21,13 @@ const ShowDetails = ({ show }) => {
         <>
         <article className={styles.show}>
             <div className={styles.show__img_container}>
-                <img 
-                    className={styles.show__img} 
-                    alt={`image for the show ${name}`}
-                    src={image.original && image.original}
-                />
+                <div className={styles.show__img_constrainer}>
+                    <img 
+                        className={styles.show__img} 
+                        alt={`image for the show ${name}`}
+                        src={image.original && image.original}
+                    />
+                </div>
             </div>
             <div className={styles.show__content}>
                 <h1>{name}</h1>

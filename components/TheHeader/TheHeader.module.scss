@@ -8,19 +8,51 @@
         color: white;
         justify-content: space-between;
         align-items: center;
-        width: 85%;
+        width: 90%;
         max-width: 120rem;
     }
     &__logo {
-        font-size: 2.8rem;
+        font-size: 3rem;
         font-family: 'Nerko One', cursive;
+        transition: all .3s;
+        backface-visibility: hidden;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.2)
+        }
+    }
+    &__select {
+        border: none;
+        padding: 1rem;
+        font-size: 1.6rem;
+        font-family: inherit;
+        &:focus,
+        &:active {
+            border: none;
+            outline: none;
+        }
     }
     &__list {
         list-style: none;
         display: flex;
+        padding: 0;
     }
     &__link {
         padding: 2rem;
         font-size: 1.8rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .topbar {
+        &__container {
+            flex-direction: column;
+        }
+        &__rearch {
+            order: 1;
+        }
+        &__form {
+            order: 1;
+        }
     }
 }
