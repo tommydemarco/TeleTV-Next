@@ -1,6 +1,8 @@
 import Head from 'next/head'
 //=========> COMPONENTS 
 import HomeFeature from '../components/HomeFeature/HomeFeature'
+//=========> MY CUSTOM STENCIL COMPONENT
+
 
 const features = [
     {id: 1, name: "Fast", icon: "fa fa-fire"},
@@ -11,9 +13,7 @@ const features = [
 export const getStaticProps = async () => {
 
     const response = features
-
     console.log(response)
-
     return {
         revalidate: 1000,
         props: {
@@ -45,7 +45,7 @@ const HomePage = ({ features }) => {
             </div>
         </div>
 
-        <style jsx>
+        <style jsx>  
             {`
             .home-container {
                 margin-top:5rem;

@@ -14,6 +14,7 @@ export async function getStaticProps(context) {
     const url = `https://api.tvmaze.com/schedule?country=${country}&date=2020-10-10`
     try {
         const response = await axios.get(url)
+
         data = response.data
         shows = data.map(show => show.show)
         //sorry about the syntax but I've been getting 500s for 20 minutes straight,
@@ -29,7 +30,7 @@ export async function getStaticProps(context) {
             .filter(show => show.name.length < 20)
     } catch(err) {
         console.log(err)
-        data = null
+        shows = null
     }
     return { props: {shows, country} }
 }
@@ -37,8 +38,8 @@ export async function getStaticProps(context) {
 //GET STATIC PROPS FOR INFINITE PATHS OPTIONS
 export const getStaticPaths = () => {
     return {
-        paths: [],
-        fallback: true
+        paths: [ { params: { country: 'us'}}, { params: { country: 'gb'}}],
+        fallback: false
     }
 }
 
@@ -62,7 +63,6 @@ export default function ShowsPage(props) {
             <Head>
                 <title>TeleTV - Shows</title>
             </Head>
-
 
             <div className="shows-container">
             <h1 className="shows-container__title">Available shows</h1>

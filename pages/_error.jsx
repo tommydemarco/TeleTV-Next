@@ -1,10 +1,8 @@
-//=========> COMPONENTS 
-import Layout from '../components/Layout/Layout'
 
 export default function CustomError({ statusCode, message }) {
     const errorMessage = message || "There was a problem"
     return (
-        <Layout>
+        <>
         <div className="error-page">
             <h1>{statusCode}</h1>
             <h3>
@@ -21,6 +19,7 @@ export default function CustomError({ statusCode, message }) {
             }
             `}
         </style>
-        </Layout>
+        </
+        >
     )
 }

@@ -16,18 +16,26 @@ export default function TheFooter() {
                             doloremque commodi eveniet culpa reprehenderit facere.
                         </p>
                         <div className="footer__social">
-                            <a href="" className="footer__social-link">
-                                <i className="fa fa-facebook"></i>
-                            </a>
-                            <a href="" className="footer__social-link">
-                                <i className="fa fa-facebook"></i>
-                            </a>
-                            <a href="" className="footer__social-link">
-                                <i className="fa fa-facebook"></i>
-                            </a>
-                            <a href="" className="footer__social-link">
-                                <i className="fa fa-facebook"></i>
-                            </a>
+                            <Link href="/">
+                                <a className="footer__social-link">
+                                    <i className="fa fa-facebook"></i>
+                                </a>
+                            </Link>
+                            <Link href="/">
+                                <a className="footer__social-link">
+                                    <i className="fa fa-facebook"></i>
+                                </a>
+                            </Link>
+                            <Link href="/">
+                                <a className="footer__social-link">
+                                    <i className="fa fa-facebook"></i>
+                                </a>
+                            </Link>
+                            <Link href="/">
+                                <a className="footer__social-link">
+                                    <i className="fa fa-facebook"></i>
+                                </a>
+                            </Link>
                         </div>
                     </div>
                     <div className="footer__single">
