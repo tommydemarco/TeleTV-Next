@@ -34,16 +34,16 @@ export default function TheFooter() {
                         <h4 className="footer__title">main menu</h4>
                         <ul className="footer__list">
                             <li className="footer__listitem">
-                                <i className="fa fa-chevron-right"></i><Link href="/" className="footer__link" href=""><a>link</a></Link>
+                                <i className="fa fa-chevron-right"></i><Link href="/"><a className="footer__link">link</a></Link>
                             </li>
                             <li className="footer__listitem">
-                                <i className="fa fa-chevron-right"></i><Link href="/" className="footer__link" href=""><a>link</a></Link>
+                                <i className="fa fa-chevron-right"></i><Link href="/"><a className="footer__link">link</a></Link>
                             </li>
                             <li className="footer__listitem">
-                                <i className="fa fa-chevron-right"></i><Link href="/" className="footer__link" href=""><a>link</a></Link>
+                                <i className="fa fa-chevron-right"></i><Link href="/"><a className="footer__link">link</a></Link>
                             </li>
                             <li className="footer__listitem">
-                                <i className="fa fa-chevron-right"></i><Link href="/" className="footer__link" href=""><a>link</a></Link>
+                                <i className="fa fa-chevron-right"></i><Link href="/"><a className="footer__link">link</a></Link>
                             </li>
                         </ul>
                     </div>
@@ -51,13 +51,13 @@ export default function TheFooter() {
                         <h4 className="footer__title">Quick links</h4>
                         <ul className="footer__list">
                             <li className="footer__listitem">
-                                <Link href="/" className="footer__link" href=""><a>link</a></Link>
+                            <i className="fa fa-chevron-right"></i><Link href="/"><a className="footer__link">link</a></Link>
                             </li>
                             <li className="footer__listitem">
-                                <Link href="/" className="footer__link" href=""><a>link</a></Link>
+                            <i className="fa fa-chevron-right"></i><Link href="/"><a className="footer__link">link</a></Link>
                             </li>
                             <li className="footer__listitem">
-                                <Link href="/" className="footer__link" href=""><a>link</a></Link>
+                            <i className="fa fa-chevron-right"></i><Link href="/"><a className="footer__link">link</a></Link>
                             </li>
                         </ul>
                     </div>
@@ -65,13 +65,13 @@ export default function TheFooter() {
                         <h4 className="footer__title">contact us</h4>
                         <ul className="footer__list">
                             <li className="footer__listitem">
-                                <i className="fa fa-chevron-right"></i><Link href="/" className="footer__link" href=""><a>link</a></Link>
+                                <i className="fa fa-chevron-right"></i><Link href="/"><a className="footer__link">link</a></Link>
                             </li>
                             <li className="footer__listitem">
-                                <i className="fa fa-chevron-right"></i><Link href="/" className="footer__link" href=""><a>link</a></Link>
+                                <i className="fa fa-chevron-right"></i><Link href="/"><a className="footer__link">link</a></Link>
                             </li>
                             <li className="footer__listitem">
-                                <i className="fa fa-chevron-right"></i><Link href="/" className="footer__link" href=""><a>link</a></Link>
+                                <i className="fa fa-chevron-right"></i><Link href="/"><a className="footer__link">link</a></Link>
                             </li>
                         </ul>
                     </div>

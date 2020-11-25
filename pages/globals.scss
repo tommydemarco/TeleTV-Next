@@ -71,6 +71,7 @@ a {
     }
     &__list {
         list-style: none;
+        padding: 0;
     }
     &__social-link {
         color: white;
@@ -96,7 +97,10 @@ a {
         transition: all .4s;
         text-decoration: none;
         margin-bottom: 1rem;
-        display: block;
+        padding: 0.5rem 0;
+        margin-left: 1rem;
+        font-size: 1.7rem;
+        display: inline-block;
         & i {
             margin-right: .5rem;
         }
