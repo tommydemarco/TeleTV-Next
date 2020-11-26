@@ -1,16 +1,11 @@
-import Head from 'next/head'
 //========> COMPONENTS 
 import TheHeader from '../TheHeader/TheHeader'
 import TheFooter from '../TheFooter/TheFooter'
 
 
-export default function Layout({ children, title }) {
+export default function Layout({ children }) {
     return (
-        <div>
-            <Head>
-                <title>TeleTV - {title}</title>
-            </Head>
-
+        <>
             <TheHeader />
                 <div className="content-container">
                   {children}
@@ -26,6 +21,6 @@ export default function Layout({ children, title }) {
                 }
                 `}
             </style>
-        </div>
+        </>
     )
 }

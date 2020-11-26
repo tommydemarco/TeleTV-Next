@@ -1,4 +1,3 @@
-
 export default function CustomError({ statusCode, message }) {
     const errorMessage = message || "There was a problem"
     return (

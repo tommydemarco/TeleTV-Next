@@ -1,7 +1,6 @@
 import Head from 'next/head'
 //=========> COMPONENTS 
 import HomeFeature from '../components/HomeFeature/HomeFeature'
-//=========> MY CUSTOM STENCIL COMPONENT
 
 
 const features = [
@@ -10,12 +9,11 @@ const features = [
     {id: 2, name: "Connected", icon: "fa fa-globe"}
 ]
 
+//JUST TO TEST GETSTATICPROPS
 export const getStaticProps = async () => {
 
     const response = features
-    console.log(response)
     return {
-        revalidate: 1000,
         props: {
             features: response
         }

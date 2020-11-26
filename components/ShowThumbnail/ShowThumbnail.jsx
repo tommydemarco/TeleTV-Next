@@ -3,8 +3,9 @@ import Link from 'next/link'
 import styles from './ShowThumbnail.module.scss'
 
 const ShowThumbnail = ({show, href, as}) => {
+    
     const { name, image, id, type} = show
-    console.log(name, image, id, type)
+
     return (
         <article className={styles.thumbnail} >
             <div className={styles.thumbnail__img_container}>

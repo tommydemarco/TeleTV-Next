@@ -46,7 +46,7 @@ export const getStaticPaths = () => {
 export default function ShowsPage(props) {
 
     const router = useRouter()
- 
+    
     const renderList = () => {
         return props.shows.slice(0, 6).map(show => (
             <ShowThumbnail 
