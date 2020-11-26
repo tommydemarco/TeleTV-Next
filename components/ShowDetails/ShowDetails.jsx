@@ -1,6 +1,6 @@
 import parse from 'html-react-parser'
 //========> COMPONENTS 
-import CastMember from '../../components/Castmember/CastMember'
+import CastMember from '../../components/CastMember/CastMember'
 //========> CSS
 import styles from './ShowDetails.module.scss'
 
