@@ -53,12 +53,12 @@ export default function TheHeader() {
                 </form>
                 <ul className={styles.topbar__list}>
                     <li className={styles.topbar__item}>
-                        <Link href="/about">
+                        <Link href="/">
                             <a className={styles.topbar__link}>About</a>
                         </Link>
                     </li>
                     <li className={styles.topbar__item}>
-                        <Link href="/contacts">
+                        <Link href="/">
                             <a className={styles.topbar__link}>Contacts</a>
                         </Link>
                     </li>
