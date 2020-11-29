@@ -54,7 +54,7 @@ export default function ShowsPage(props) {
                 show={show} 
                 href={`/[country]/[showId]`}
                 as={`/${props.country}/${show.id}`}
-            />
+            />   
         ))
     }
 
