@@ -5,8 +5,8 @@ import HomeFeature from '../components/HomeFeature/HomeFeature'
 
 const features = [
     {id: 1, name: "Fast", icon: "fa fa-fire"},
-    {id: 1, name: "Reliable", icon: "fa fa-shield"},
-    {id: 2, name: "Connected", icon: "fa fa-globe"}
+    {id: 2, name: "Reliable", icon: "fa fa-shield"},
+    {id: 3, name: "Connected", icon: "fa fa-globe"}
 ]
 
 //JUST TO TEST GETSTATICPROPS

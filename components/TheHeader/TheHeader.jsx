@@ -5,9 +5,9 @@ import { useRouter } from 'next/router'
 import styles from './TheHeader.module.scss'
 
 const countries = [
-    {name: 'Select Country', code: ''},
-    {name: 'United States', code: 'us'},
-    {name: 'Great Britain', code: 'gb'}
+    {id: 1, name: 'Select Country', code: ''},
+    {id: 2, name: 'United States', code: 'us'},
+    {id: 3, name: 'Great Britain', code: 'gb'}
 ]
 
 export default function TheHeader() {
@@ -18,7 +18,7 @@ export default function TheHeader() {
 
     const renderCoutryOptions = () => {
         return countries.map(country => {
-            return <option value={country.code}>{country.name}</option>
+            return <option key={country.id} value={country.code}>{country.name}</option>
         })
     }
 

@@ -50,7 +50,7 @@ export default function ShowsPage(props) {
     const renderList = () => {
         return props.shows.slice(0, 6).map(show => (
             <ShowThumbnail 
-                id={show.id} 
+                key={show.id} 
                 show={show} 
                 href={`/[country]/[showId]`}
                 as={`/${props.country}/${show.id}`}

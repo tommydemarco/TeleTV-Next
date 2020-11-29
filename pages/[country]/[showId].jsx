@@ -6,6 +6,8 @@ import ShowDetails from '../../components/ShowDetails/ShowDetails'
 
 export const getServerSideProps = async (context) => {
 
+    console.log(context)
+
     const showId = context.query.showId
     const url = `https://api.tvmaze.com/shows/${showId}?embed=cast`
 
